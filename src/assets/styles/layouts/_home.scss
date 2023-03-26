@@ -53,7 +53,9 @@ body {
 }
 
 .flex {
-  display: flex;
+  @media (min-width: $mqMinWidth) {
+    display: flex;
+  }
 }
 
 .uoc-title1 {font-family: 'Aleo', serif;}
