@@ -6,33 +6,33 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0;
   padding: 2rem;
+  margin: 0;
   font-family: $font-family-sans-serif;
   font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
+  line-height: 1.5;
   color: $uoc-corporate;
+  background-color: $uoc-bg;
 }
 
 .uoc-container {
-  max-width: 800px;
-  margin: auto;
+  // max-width: 800px;
   padding: 2rem;
-  border-radius: 2rem;
+  margin: auto;
   text-align: center;
   background-color: #fff;
+  border-radius: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .uoc-logo {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
   max-width: 200px;
   height: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
 
   @media (min-width: $mqMinWidth) {
     max-width: none;
@@ -46,12 +46,36 @@ body {
   color: $uoc-corporate;
 
   @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+    font-size: 86px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.uoc-title1 {font-family: 'Aleo', serif;}
+.uoc-title2 {font-family: 'BioRhyme', serif;}
+.uoc-title3 {font-family: 'Cambo', serif;}
+.uoc-title4 {font-family: 'Grenze', serif;}
+.uoc-title5 {font-family: 'Hepta Slab', serif;}
+.uoc-title6 {font-family: 'Josefin Slab', serif;}
+.uoc-title7 {font-family: 'Kadwa', serif;}
+.uoc-title8 {font-family: 'Kameron', serif;}
+.uoc-title9 {font-family: 'Odor Mean Chey', serif;}
+.uoc-title10 {font-family: 'Podkova', serif;}
+.uoc-title11 {font-family: 'Rokkitt', serif;}
+.uoc-title12 {font-family: 'Suravaram', serif;}
+.uoc-title13 {font-family: 'Suwannaphum', serif;}
 
 .uoc-footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
+}
+
+.fas, .fa-solid {
+  font-size: 10em;
 }

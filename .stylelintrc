@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "declaration-block-no-duplicate-properties": true,
+    "selector-anb-no-unmatchable": true,
+    "annotation-no-unknown": true,
+    "declaration-property-value-no-unknown": true,
+    "no-unknown-animations": true,
+    "declaration-property-unit-allowed-list": {
+        "font-size": ["em", "rem", "px"],
+        "/^animation/": "s",
+        "line-height": []
+    },
+    "length-zero-no-unit": true,
+    "selector-disallowed-list": ["/^#/"],
+    "function-name-case": "lower",
+    "max-nesting-depth": 2,
+    "alpha-value-notation": "number",
+    "font-weight-notation": "numeric",
+    "shorthand-property-no-redundant-values": true
+  }
+}
