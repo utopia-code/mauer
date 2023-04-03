@@ -1,53 +1,191 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <div class="flex">
-        <div>
-          <h1 class="uoc-title uoc-title1">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title2">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title3">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title4">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title5">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title6">Mauer - Muro</h1>
-        </div>
-        <div>
-          <h1 class="uoc-title uoc-title7">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title8">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title9">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title10">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title11">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title12">Mauer - Muro</h1>
-          <h1 class="uoc-title uoc-title13">Mauer - Muro</h1>
-        </div>
-      </div>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+		<title>UOC Boilerplate</title>
+	</head>
+	<body>
+			<div class="uoc-container">
+				<picture>
+					<source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
+					<img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
+				</picture>
+				<div class="flex">
+					<div>
+					<h1 class="uoc-title">Mauer II - Muro</h1>
+					</div>
+				</div>
 
-      <div><i class="fa-solid fa-cubes-stacked"></i></div>
-      <div><i class="fa-solid fa-lines-leaning"></i></div>
-      <div><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></div>
-      <div><i class="fa-solid fa-square"></i></div>
-      <div><i class="fa-solid fa-puzzle-piece"></i></div>
-      <div><i class="fa-solid fa-link"></i></div>
-      <div><i class="fa-solid fa-arrows-left-right-to-line"></i></div>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+				
+			
+			</div>
+
+		<section class="wrapper">
+			<div class="content-wrap">
+				<div class="container-wrap">
+
+					<div>
+						<h1><i lang="de">Mauersteine</i></h1>
+						<p>"Un monumento es algo más que una estructura de piedra, madera u hormigón. Estas piedras históricas 
+							del muro son un testimonio de nuestra historia, nuestra cultura y lugares vivos del recuerdo"</p>
+						<p>Los tres restos de muralla son testimonios de nuestra historia y nuestra tarea es conservarlos, 
+								mantenerlos y llamar más la atención sobre ellos.</p>
+						<p>El Muro de Berlín fue un testimonio significativo de la división de Alemania y de toda Europa durante la Guerra Fría. 
+							Sólo ha sobrevivido un número limitado de piezas individuales de este muro.</p>
+					</div>
+
+					<div class="grid-filter-wrap">
+
+						<div id="filters" class="button-group filter-button-group">
+
+							<!-- <include src="./views/tabs.html"></include> -->
+
+							<button class="button is-checked" data-filter=".triangle"><i class="fa-solid fa-shapes"></i>Deutsches Eck</button>
+							<button class="button" data-filter=".statue"><i class="fa-solid fa-puzzle-piece"></i>Estatua</button>
+							<button class="button" data-filter=".shields"><i class="fa-solid fa-shield-halved"></i>Escudos</button>
+							<button class="button" data-filter=".wall"><i class="fa-solid fa-cubes-stacked"></i>Muro</button>
+							<button class="button" data-filter=".inscriptions"><i class="fa-solid fa-lines-leaning"></i>Inscripciones</button>
+
+						</div>
+					</div>
+
+					<div class="portfolio grid">
+
+						<div class="grid-sizer"></div>
+
+						<div class="grid-item statue">
+
+							<div>
+								<h2>Evolución de la estatua ecuestre</h2>
+								<p>En 1871 se erigió una estatua ecuestre del Kaiser Guillermo I en el <i lang="de">Deutsches Eck</i>, un promontorio elevado artificialmente
+									 en la desembocadura del Mosela en el Rin, como monumento a la fundación del Imperio Alemán. Muy dañado en la 
+									 Segunda Guerra Mundial, el pedestal sirvió de monumento a la unidad alemana de 1953 a 1990.</p>
+							</div>
+
+						</div>
+
+						<div class="grid-item shields">
+
+							<div>
+								<h2>La reprentación de los Estados Alemanes</h2>
+								<p>El 18 de mayo de 1953, el pedestal que quedaba del Monumento al Káiser se convirtió en un monumento a la unidad alemana. 
+									Para demostrar esta unidad, se colocaron en el pedestal los escudos de todos los estados alemanes. Con la reunificación de 
+									Alemania el 3 de octubre de 1990, la hilera de escudos se completó con los nombres de los cinco nuevos estados federales. </p>
+							</div>
+							
+						</div>
+
+						<div  class="grid-item wall">
+
+							<div>
+								<h2>Simbología del conjunto</h2>
+								<p>En junio de 1990, tres segmentos del Muro de Berlín fueron erigidos junto al monumento, entregados por el todavía 
+									Primer Ministro de la RDA, <i lang="de">Lothar de Maizière</i>. Las placas de bronce asociadas conmemoran a las víctimas de la división 
+									desde el 17 de junio de 1953 hasta el 9 de noviembre de 1989.</p>
+
+								<p>Los trozos del muro que se trajeron aquí desde Berlín asumen esta función. Completan la declaración de conjunto del monumento 
+									"<i lang="de">Deutsches Eck</i>" en el espejo de su evolución y de la evolución política. Se han convertido así en parte inseparable del monumento 
+									de la <i lang="de">Deutsches Eck</i> y son indispensables para su declaración como monumento conmemorativo de la división y la reunificación.</p>
+
+							</div>
+
+						</div>
+
+						<div  class="grid-item grid-item--width2 wall">
+
+							<div>
+								<p>Hoy, estos tres elementos de hormigón del Muro de Berlín conmemoran la unidad alemana. Según la placa de bronce, están dedicados 
+										a las víctimas de la división y se erigieron en 1990 a la derecha del monumento, a orillas del Mosela.</p>
+							</div>
+
+						</div>
+
+						<div class="grid-item triangle">
+
+							<div>
+								<h2>Objetivo de reunificación</h2>
+								<p>El Monumento al Kaiser Wilhelm en el <i lang="de">Deutsches Eck</i> 
+									era un monumento conmemorativo a la unidad alemana que debía recuperarse durante la Guerra Fría. Así lo 
+									ponían de manifiesto las banderas de los estados federados y los escudos de los países situados detrás del Muro, 
+									en el este, que aún se consideraban parte de Alemania. La reunificación era el objetivo político expresado aquí. 
+									Entre otras cosas, esto se expresaba también por la ausencia de la estatua ecuestre. Después de 1990, esta 
+									declaración del <i lang="de">Deutsches Eck</i> pasó a un segundo plano, porque la unidad se había logrado sobre la base de la 
+									revolución pacífica en la RDA. La conclusión lógica tras la nueva colocación de la estatua ecuestre era expresar 
+									la unidad completada en las inmediaciones del <i lang="de">Deutsches Eck</i>, donde durante tanto tiempo se había expresado este objetivo.</p>
+							</div>
+							
+						</div>
+
+						<!-- inscriptions -->
+
+						<div class="grid-item inscriptions">
+
+							<div>
+								<h2>Qué son, qué dicen</h2>
+								<p>Se trata de tres trozos originales del antiguo Muro de Berlín con la inscripción
+									A las víctimas de la división (<i lang="de">Den Opfern der Teilung</i>) <br>
+									17 de junio de 1953 (<i lang="de">17. Juni 1953</i>) <br>
+									9 de noviembre de 1989 (<i lang="de">9. November 1989</i>)</p>
+							</div>
+
+						</div>
+
+						<div class="grid-item inscriptions">
+
+							<div>
+								<h2>A las víctimas de la división</h2>
+								<p>La sección histórica pretende informar sobre los orígenes y el carácter inhumano de las fortificaciones fronterizas del interior de 
+									Alemania y sus víctimas. La atención no se centrará en las "muertes en el Muro" en sentido estricto, sino también en aquellas personas 
+									que desaparecieron tras los muros de las prisiones durante años tras fugas infructuosas, cuyos hijos fueron llevados a hogares o dados 
+									en adopción. También se mencionará a quienes tuvieron que sufrir años de represalias tras solicitar la salida del país.</p>
+							</div>
+							
+						</div>
+
+						<div class="grid-item inscriptions">
+
+							<div>
+								<h2>17 de junio de 1953</h2>
+								<p>A partir de información básica sobre el 17 de junio de 1953, este libro informa sobre la resistencia en la RDA contra la dictadura del SED. 
+									La resistencia también incluyó manifestaciones del "Círculo Blanco" (<i lang="de">„Weißen Kreises“/i>) en Jena, que hizo campaña pública por el derecho a 
+									abandonar el país y sufrió una represión inhumana por hacerlo.</p>
+							</div>
+							
+						</div>
+
+						<div class="grid-item inscriptions">
+
+							<div>
+								<h2>9 de noviembre de 1989</h2>
+								<p>A lo largo de la historia del Bloque del Este hubo protestas y resistencia, algunas de las cuales acabaron fatalmente. Merece la pena 
+									recordar, por ejemplo, la resistencia temprana del "Círculo de Eisenberg" o la oposición en Jena desde los años setenta, que en 
+									los ochenta se convirtieron en redes de activistas por los derechos civiles que abarcaban toda la RDA. En otoño de 1989, 
+									la resistencia culminó en protestas públicas que fueron mucho más allá de Leipzig. Sin esta protesta pública generalizada, 
+									la caída del Muro difícilmente se habría producido de esta manera.</p>
+							</div>
+							
+						</div>
+				
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- <div><i class="fa-solid fa-cubes-stacked"></i></div>
+		<div><i class="fa-solid fa-lines-leaning"></i></div>
+		<div><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></div>
+		<div><i class="fa-solid fa-square"></i></div>
+		<div><i class="fa-solid fa-puzzle-piece"></i></div>
+		<div><i class="fa-solid fa-link"></i></div>
+		<div><i class="fa-solid fa-arrows-left-right-to-line"></i></div>
+		<div><i class="fa-solid fa-hand-peace"></i></div>
+		<div><i class="fa-solid fa-person-through-window"></i></div> -->
+
+		<include src="./views/footer.html"></include>
+		<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+	</body>
 </html>
