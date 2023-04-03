@@ -66,8 +66,17 @@ body {
   text-align: center;
 }
 
-.fas, .fa-solid {
-  font-size: 10em;
+button {
+  .fas, .fa-solid {
+    font-size: 1.4em;
+    margin-right: .8rem;
+  }
+}
+
+.tab-item {
+  .fas, .fa-solid {
+    font-size: 10em;
+  }
 }
 
 h1, h2, h3 {

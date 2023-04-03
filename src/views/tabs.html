@@ -1,28 +1,20 @@
 
-<!-- <button class="button" data-filter="{{ filter }}"><i class="fa-solid  {{ class }}"></i>{{ text }}</button> -->
-
-<!-- <script locals>
+<script locals>
     module.exports = {
         button: [
-            {"filter": ".triangle", "class": "fa-shapes", "text": "Deutsches Eck"},
-            {"filter": ".statue", "class": "fa-lines-leaning", "text": "Pedestal"},
-            {"filter": ".shields", "class": "fa-puzzle-piece", "text": "Escudos"},
-            {"filter": ".wall", "class": "fa-solid fa-cubes-stacked", "text": "Muro"},
-            {"filter": ".symbols", "class": "fa-solid fa-hand-peace", "text": "Simbología"},
-            {"filter": ".inscriptions", "class": "fa-person-through-window", "text": "Inscripciones"}
+
+            ['.tab-triangle', 'fa-shapes', 'Deutsches Eck'],
+            ['.tab-statue', 'fa-puzzle-piece', 'Estatua'],
+            ['.tab-shields', 'fa-shield-halved', 'Escudos'],
+            ['.tab-wall', 'fa-cubes-stacked', 'Muro'],
+            ['.tab-inscriptions', 'fa-lines-leaning', 'Inscripciones']
         ]
     }
 </script>
 
-<each loop="value, key in button">
-    <button class="button is-checked" data-filter="{{ filter }}"><i class="fa-solid {{ class }}"></i>{{ value }}</button>
-</each> -->
+<each loop="item, key in button">
+    <button class="button {{ key === 0 ? 'is-checked' : '' }}" data-filter="{{ item[0] }}"><i class="fa-solid {{ item[1] }}"></i>{{ item[2] }}</button> 
+</each>
 
 
-<!-- <include src="./views/tabs.html" locals='{"filter": ".triangle", "class": "fa-shapes", "text": "Deutsches Eck"}'></include>
-<include src="./views/tabs.html" locals='{"filter": ".statue", "class": "fa-lines-leaning", "text": "Pedestal"}'></include>
-<include src="./views/tabs.html" locals='{"filter": ".shields", "class": "fa-puzzle-piece", "text": "Escudos"}'></include>
-<include src="./views/tabs.html" locals='{"filter": ".wall", "class": "fa-solid fa-cubes-stacked", "text": "Muro"}'></include>
-<include src="./views/tabs.html" locals='{"filter": ".symbols", "class": "fa-solid fa-hand-peace", "text": "Simbología"}'></include>
-<include src="./views/tabs.html" locals='{"filter": ".inscriptions", "class": "fa-person-through-window", "text": "Inscripciones"}'></include>
--->
+
