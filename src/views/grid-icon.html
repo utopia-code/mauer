@@ -1,0 +1,18 @@
+
+<script locals>
+    module.exports = {
+        icons: [
+
+            ['tab-triangle', 'fa-shapes'],
+            ['tab-statue', 'fa-puzzle-piece'],
+            ['tab-shields', 'fa-shield-halved'],
+            ['tab-wall', 'fa-cubes-stacked'],
+            ['tab-inscriptions', 'fa-lines-leaning']
+        ]
+    }
+</script>
+
+<each loop="icon in icons">
+    <div class="grid-item grid-item-width-2 tab-item {{ icon[0] }}"><i class="fa-solid {{ icon[1] }}"></i></div>
+</each>
+

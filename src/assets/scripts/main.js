@@ -8,6 +8,8 @@
 
 
 import Isotope from 'isotope-layout';
+var fslightbox = require("fslightbox");
+
 
 /**
  * Write any other JavaScript below
@@ -26,7 +28,7 @@ import Isotope from 'isotope-layout';
 		}
 	});
 	
-	iso.arrange({ filter: '.triangle' });
+	iso.arrange({ filter: '.tab-triangle' });
 	
 	let filtersElem = document.querySelectorAll('.filter-button-group .button');
 	
@@ -37,6 +39,8 @@ import Isotope from 'isotope-layout';
 		});
 	});
 } )();
+
+// SORTING -> https://isotope.metafizzy.co/sorting.html
 
 
 // set class in active buttons isotope gallery;
@@ -53,7 +57,23 @@ import Isotope from 'isotope-layout';
 } )();
 
 
++(function () {
+    
+    // aspect-ratio
 
+    let aspectRatio = document.querySelectorAll('.js-set-aspect-ratio');
+    let width,
+        height;
+
+    aspectRatio.forEach(function(r) {
+        width = r.getAttribute('width');
+        height = r.getAttribute('height');
+        r.style.aspectRatio = `${width} / ${height}`;
+		r.style.width = '100%';
+		r.style.height = '100%';
+    })
+
+})();
 
 
 
