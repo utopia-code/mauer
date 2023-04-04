@@ -25,6 +25,9 @@ var fslightbox = require("fslightbox");
 		masonry: {
 			columnWidth: '.grid-sizer',
 			gutter: 10
+		},
+		getSortData: {
+			category: '[data-category]'
 		}
 	});
 	
@@ -36,6 +39,7 @@ var fslightbox = require("fslightbox");
 		filterElem.addEventListener( 'click', function() {
 			var filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
+			iso.arrange({ sortBy: 'random' });
 		});
 	});
 } )();

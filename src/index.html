@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
@@ -8,39 +8,96 @@
 		<title>UOC Boilerplate</title>
 	</head>
 	<body>
-			<div class="uoc-container">
-				<picture>
-					<source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-					<img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-				</picture>
-				<div class="flex">
-					<div>
-					<h1 class="uoc-title">Mauer II - Muro</h1>
-					</div>
-				</div>
+		
+		<section class="wrapper">
+			<div class="content-wrap">
 
-				<div>
-					<h1><i lang="de">Mauersteine</i></h1>
-					<p>"Un monumento es algo más que una estructura de piedra, madera u hormigón. Estas piedras históricas 
-						del muro son un testimonio de nuestra historia, nuestra cultura y lugares vivos del recuerdo"</p>
-					<p>Los tres restos de muralla son testimonios de nuestra historia y nuestra tarea es conservarlos, 
-							mantenerlos y llamar más la atención sobre ellos.</p>
-					<p>El Muro de Berlín fue un testimonio significativo de la división de Alemania y de toda Europa durante la Guerra Fría. 
-						Sólo ha sobrevivido un número limitado de piezas individuales de este muro.</p>
+				<h1>
+					<div class="logo">
+						<div class="logo-left"></div>
+						<div class="logo-center"></div>
+						<div class="logo-right"></div>
+					</div>
+					<i lang="de">Mauersteine</i>
+				</h1>
+
+				<div class="container-wrap container">
+						
+						<div class="flex">
+							<div>
+								
+							</div>
+							<div>
+								<p>"Un monumento es algo más que una estructura de piedra, madera u hormigón. Estas piedras históricas 
+									del muro son un testimonio de nuestra historia, nuestra cultura y lugares vivos del recuerdo"</p>
+								<p>Nuestra tarea es conservarlos, mantenerlos y llamar más la atención sobre ellos.</p>
+								<p>El Muro de Berlín fue un testimonio significativo de la división de Alemania y de toda Europa durante la Guerra Fría. 
+									Sólo ha sobrevivido un número limitado de piezas individuales de este muro.</p>
+							</div>
+						</div>
+						
 				</div>
-				
-			
 			</div>
+		</section>
+				
+		<!-- src="https://www.youtube.com/embed/HNkIhouCiJg?start=5&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;showinfo=0&amp;loop=1&amp;fs=0&amp;cc_load_policy=0&amp;rel=0"  -->
+		<section class="wrapper">
+			<div class="content-wrap">
+				<div class="container-wrap">
+
+					<div class="flex">
+						<div>
+							<picture>
+								<iframe 
+									width="560" 
+									height="315" 
+									src="https://www.youtube.com/embed/6Uxad8CoiQw?controls=0&loop=1&autoplay=1&mute=1&start=168" 
+									title="YouTube video player" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+								</iframe>
+								<figcaption>Construcción del Muro de Berlín - 13 agosto de 1961</figcaption>
+							</picture>
+						</div>
+
+						<div></div>
+
+						<div>
+							<picture>
+								<iframe 
+									width="560" 
+									height="315" 
+									src="https://www.youtube.com/embed/HNkIhouCiJg?controls=0&autoplay=1&mute=1&loop=1&start=5" 
+									title="YouTube video player" 
+									allowfullscreen>
+								</iframe>
+                        		<figcaption>Caída del muro de Berlín - 9 de noviembre de 1989</figcaption>
+							</picture>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
 
 		<section class="wrapper">
 			<div class="content-wrap">
 				<div class="container-wrap">
 
-					<div class="grid-filter-wrap">
-						<div id="filters" class="button-group filter-button-group">
-							<include src="./views/grid-tabs.html"></include>
-						</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="wrapper">
+			<div class="content-wrap">
+				<div class="grid-filter-wrap">
+					<div id="filters" class="button-group filter-button-group">
+						<include src="./views/grid-tabs.html"></include>
 					</div>
+				</div>
+
+				<div class="container-wrap">
 
 					<div class="grid grid-container">
 
@@ -49,16 +106,16 @@
 						<!-- isotope filter content -->
 						<include src="./views/grid-icon.html"></include>
 						<include src="./views/grid-text.html"></include>
-						
 						<include src="./views/grid-lightbox.html"></include>
 				
 					</div>
 
 				</div>
+
 			</div>
 		</section>
 
 		<include src="./views/footer.html"></include>
-		<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+		<script async type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 	</body>
 </html>

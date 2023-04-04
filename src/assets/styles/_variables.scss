@@ -3,8 +3,26 @@
 $font-family-sans-serif: "Futura", sans-serif;
 $font-family-serif: "Podkova", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$color-main: #000000;
+$color-secondary: #ff0000;
+// $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
-$mqMinWidth: 420px;
+$mq-xs: 450px;
+$mq-s: 767.89px;
+$mq-m: 991px;
+$mq-lg: 1200px;
+$mq-xl: 1800px;
+
+@mixin for-size($size) {
+    @if $size == mobile {
+      @media (max-width: $mq-xs) { @content; }
+    } @else if $size == small-devices {
+      @media (max-width: $mq-s) { @content; }
+    } @else if $size == tablet {
+      @media (min-width: ($mq-s + .5px)) { @content; }
+    } @else if $size == desktop {
+      @media (min-width: $mq-lg) { @content; }
+    } @else if $size == big-devices {
+      @media (min-width: $mq-xl) { @content; }
+    }
+}
