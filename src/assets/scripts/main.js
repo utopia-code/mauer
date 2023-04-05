@@ -37,11 +37,23 @@ var fslightbox = require("fslightbox");
 		iso.arrange({ filter: '.tab-triangle' });
 	});
 
+	iso.on( 'layoutComplete', function( laidOutItems ) {
+		console.log( 'Isotope layout completed on ' +
+		laidOutItems.length + ' items' );
+	} )
+
+	function onArrange() {
+		console.log('arrange done');
+		
+	}
+
+	iso.on( 'arrangeComplete', onArrange );
+
 	let filtersElem = document.querySelectorAll('.filter-button-group .button');
-	
+
 	filtersElem.forEach(function(filterElem) {
 		filterElem.addEventListener( 'click', function() {
-			var filterValue = this.getAttribute('data-filter');
+			let filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
 		});
 	});
