@@ -54,7 +54,7 @@ var fslightbox = require("fslightbox");
 		filterElem.addEventListener( 'click', function() {
 			let filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
-			iso.arrange({ sortBy: 'random' });
+			// iso.arrange({ sortBy: 'random' });
 		});
 	});
 } )();
