@@ -29,7 +29,8 @@ var fslightbox = require("fslightbox");
 	});
 
 	window.addEventListener('DOMContentLoaded', (event) => {
-		iso.arrange();
+		// iso.arrange();
+		iso.arrange({ sortBy: 'random' });
 	});
 
 	window.addEventListener('load', (event) => {
@@ -42,7 +43,6 @@ var fslightbox = require("fslightbox");
 		filterElem.addEventListener( 'click', function() {
 			var filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
-			iso.arrange({ sortBy: 'random' });
 		});
 	});
 } )();
