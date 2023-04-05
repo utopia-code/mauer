@@ -29,11 +29,11 @@ var fslightbox = require("fslightbox");
 	});
 
 	window.addEventListener('DOMContentLoaded', (event) => {
-		// iso.arrange();
-		iso.arrange({ sortBy: 'random' });
+		iso.arrange();
 	});
 
 	window.addEventListener('load', (event) => {
+		iso.arrange({ sortBy: 'random' });
 		iso.arrange({ filter: '.tab-triangle' });
 	});
 
