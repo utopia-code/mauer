@@ -1,4 +1,4 @@
-<script locals>
+<script type="module" locals>
     module.exports = {
         images: [
 
@@ -289,7 +289,7 @@
 <each loop="img in images">
 
     <div class="grid-item {{ img[0] }}" data-category="image">
-        <a data-fslightbox="image" href="./assets/images/gallery/{{ img[1] }}">
+        <a data-fslightbox="image-{{ img[0] }}" href="./assets/images/gallery/{{ img[1] }}">
             <picture>
                 <source type="image/avif" srcset="./assets/images/gallery/thumb-{{ img[1] }}?as=avif">
                 <source type="image/webp" srcset="./assets/images/gallery/thumb-{{ img[1] }}?as=webp">

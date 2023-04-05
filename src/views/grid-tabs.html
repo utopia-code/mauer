@@ -1,13 +1,13 @@
 
-<script locals>
+<script type="module" locals>
     module.exports = {
         button: [
 
             ['.tab-triangle', 'fa-shapes', 'Deutsches Eck'],
-            ['.tab-statue', 'fa-puzzle-piece', 'Estatua'],
-            ['.tab-shields', 'fa-shield-halved', 'Escudos'],
-            ['.tab-wall', 'fa-cubes-stacked', 'Muro'],
-            ['.tab-inscriptions', 'fa-lines-leaning', 'Inscripciones']
+            ['.tab-statue', 'fa-chess-knight', 'Estatua'],
+            ['.tab-shields', 'fa-puzzle-piece', 'Escudos'],
+            ['.tab-wall', 'fa-lines-leaning', 'Muro'],
+            ['.tab-inscriptions', 'fa-link', 'Inscripciones']
         ]
     }
 </script>
@@ -15,6 +15,3 @@
 <each loop="item, key in button">
     <button class="button {{ key === 0 ? 'is-checked' : '' }}" data-filter="{{ item[0] }}"><i class="fa-solid {{ item[1] }}"></i>{{ item[2] }}</button> 
 </each>
-
-
-
