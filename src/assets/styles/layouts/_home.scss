@@ -267,7 +267,13 @@ iframe {
   left: 50%;
   transform: translateX(-50%);
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 3px;
+  -webkit-text-stroke: 1px;
+  @include for-size(tablet) {
+    -webkit-text-stroke: 2px;
+  }
+  @include for-size(desktop) {
+    -webkit-text-stroke: 3px;
+  }
 }
 
 figcaption {
@@ -283,28 +289,15 @@ figcaption {
 /* ---- REVISAR CSS isotope ---- */ 
 
 .grid-container {
-    // height: 100%;
-    // background-color: $color-main;
+    height: 100%;
 }
 
 .grid {
-    // height: 1000px;
-}
-
-/* clear fix */
-.grid:after {
-  // content: '';
-  // display: block;
-  // clear: both;
-}
-
-.grid-item {
-  // float: left;
-  // margin-bottom: 10px;
+    height: 600px;
 }
 
 .grid-sizer {
-  // min-height: 200px;
+  min-height: 600px;
 }
 
 .grid-item {

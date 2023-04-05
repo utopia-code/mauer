@@ -3,9 +3,6 @@
  * see commented examples below
  */
 
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
-
 
 import Isotope from 'isotope-layout';
 var fslightbox = require("fslightbox");
@@ -31,19 +28,21 @@ var fslightbox = require("fslightbox");
 		}
 	});
 
+	window.addEventListener('DOMContentLoaded', (event) => {
+		iso.arrange();
+	});
+
 	window.addEventListener('load', (event) => {
 		iso.arrange({ filter: '.tab-triangle' });
-		iso.arrange({ sortBy: 'random' });
-	  });
-	
-	
-	
+	});
+
 	let filtersElem = document.querySelectorAll('.filter-button-group .button');
 	
 	filtersElem.forEach(function(filterElem) {
 		filterElem.addEventListener( 'click', function() {
 			var filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
+			iso.arrange({ sortBy: 'random' });
 		});
 	});
 } )();
