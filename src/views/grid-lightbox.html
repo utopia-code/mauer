@@ -1,61 +1,61 @@
-<script async type="module" locals>
+<script type="module" locals>
     module.exports = {
         images: [
 
             [
                 'tab-triangle', 
                 'CR-Bundesarchiv_B_145_Bild-F011327-0025_Koblenz_Deutsches_Eck.jpg', 
-                '600',
-                '600',
-                ''
+                600,
+                600,
+                'bla bla blas'
             ],
             [
                 'tab-triangle', 
                 'IMG_0605.jpg', 
-                '600',
-                '600',
-                ''
+                600,
+                600,
+                'bla bla blas'
             ],
             [
                 'tab-triangle', 
                 'IMG_0576.jpg', 
-                '600',
-                '600',
-                ''
+                600,
+                600,
+                'bla bla blas'
             ],
             [
                 'tab-triangle', 
                 'CR-Koblenz_Deutsches_Eck.jpg', 
-                '600',
-                '600',
-                ''
+                600,
+                600,
+                'bla bla blas'
             ],
             [
                 'tab-triangle', 
                 'CR-Koblenz_im_Buga-Jahr_2011_Deutsches_Eck.jpg', 
-                '600',
-                '600',
-                ''
+                600,
+                600,
+                'bla bla blas'
             ],
             [
                 'grid-item-width-2 tab-triangle', 
                 'CR-Rhein-i-Flammen.jpg', 
-                '600',
-                '600',
-                ''
+                600,
+                600,
+                'bla bla blas'
             ],
             [
                 'tab-triangle', 
                 'IMG_0592.jpg', 
-                '600',
-                '600',
-                ''
+                600,
+                600,
+                'bla bla blas'
             ],
             [
                 'tab-statue', 
                 'IMG_0584.jpg', 
-                '600',
-                '600',
+                600,
+                600,
                 ''
             ],
             [
@@ -280,7 +280,7 @@
                 'IMG_0538.jpg', 
                 '600',
                 '600',
-                ''
+                'bla bla blas'
             ]
         ]
     }
@@ -295,7 +295,7 @@
                 <source type="image/webp" srcset="./assets/images/gallery/thumb-{{ img[1] }}?as=webp">
                 <source type="image/jpg" srcset="./assets/images/gallery/thumb-{{ img[1] }}">
     
-                <img src="./assets/images/gallery/thumb-{{ img[1] }}" alt="{{ item[2] }}" class="js-set-aspect-ratio" width="{{ item[3] }}" height="{{ item[4] }}" loading="lazy">
+                <img src="./assets/images/gallery/thumb-{{ img[1] }}" alt="{{ img[4] }}" class="js-set-aspect-ratio" width="{{ img[2] }}" height="{{ img[3] }}">
             </picture>
         </a>
     </div>

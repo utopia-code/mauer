@@ -29,7 +29,7 @@ var fslightbox = require("fslightbox");
 	});
 
 	window.addEventListener('DOMContentLoaded', (event) => {
-		iso.arrange();
+		// iso.arrange();
 	});
 
 	window.addEventListener('load', (event) => {
@@ -54,7 +54,9 @@ var fslightbox = require("fslightbox");
 		filterElem.addEventListener( 'click', function() {
 			let filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
-			// iso.arrange({ sortBy: 'random' });
+			iso.arrange({ sortBy: 'random' });
+			
+			// iso.reloadItems()
 		});
 	});
 } )();
@@ -81,16 +83,17 @@ var fslightbox = require("fslightbox");
     // aspect-ratio
 
     let aspectRatio = document.querySelectorAll('.js-set-aspect-ratio');
-    let width,
-        height;
 
-    aspectRatio.forEach(function(r) {
-        width = r.getAttribute('width');
-        height = r.getAttribute('height');
-        r.style.aspectRatio = `${width} / ${height}`;
-		r.style.width = '100%';
-		r.style.height = '100%';
-    })
+	window.addEventListener('DOMContentLoaded', (event) => {
+		aspectRatio.forEach(function(r) {
+			let width = r.getAttribute('width');
+			let height = r.getAttribute('height');
+			r.style.aspectRatio = `${width} / ${height}`;
+			r.style.width = '100%';
+			r.style.height = '100%';
+			// console.log(`${width} / ${height}`);
+		})
+	});
 
 })();
 
