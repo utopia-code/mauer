@@ -5,8 +5,8 @@
 
 
 import Isotope from 'isotope-layout';
-var fslightbox = require("fslightbox");
-
+import fslightbox from 'fslightbox';
+import SuperMarquee from 'sp-supermarquee';
 
 /**
  * Write any other JavaScript below
@@ -28,25 +28,10 @@ var fslightbox = require("fslightbox");
 		}
 	});
 
-	window.addEventListener('DOMContentLoaded', (event) => {
-		// iso.arrange();
-	});
-
 	window.addEventListener('load', (event) => {
 		iso.arrange({ filter: '.tab-triangle' });
+		iso.arrange({ sortBy: 'random' });
 	});
-
-	iso.on( 'layoutComplete', function( laidOutItems ) {
-		console.log( 'Isotope layout completed on ' +
-		laidOutItems.length + ' items' );
-	} )
-
-	function onArrange() {
-		console.log('arrange done');
-		
-	}
-
-	iso.on( 'arrangeComplete', onArrange );
 
 	let filtersElem = document.querySelectorAll('.filter-button-group .button');
 
@@ -54,17 +39,12 @@ var fslightbox = require("fslightbox");
 		filterElem.addEventListener( 'click', function() {
 			let filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
-			iso.arrange({ sortBy: 'random' });
-			
-			// iso.reloadItems()
 		});
 	});
 } )();
 
-// SORTING -> https://isotope.metafizzy.co/sorting.html
 
-
-// set class in active buttons isotope gallery;
+// set class in active buttons isotope gallery
 
 +( function() {
 	let buttonGroup = document.querySelectorAll('.button-group .button');
@@ -76,6 +56,33 @@ var fslightbox = require("fslightbox");
 		});
 	});
 } )();
+
+
+// set animation marquee
+
+const speedMapping = [ "superfast",  "slow",  "medium",  "fast", "medium", "slow", "fast" ];
+let separators = document.querySelectorAll('.separator-text-custom');
+let i = 0;
+
+separators.forEach( ( scrollContainer ) => {
+	new SuperMarquee( scrollContainer,
+		{
+			"content": "Muro de Berlín Muro de Berlín Muro de Berlín",
+			"speed" : speedMapping[ i % 6 ]
+		}
+	);
+
+	if (separators[1]) {
+		new SuperMarquee( separators[1],
+			{
+				"content": "Muro de Berlín Muro de Berlín Muro de Berlín",
+				"speed" : speedMapping[ i % 6 ],
+				"direction" : "rtl"
+			}
+		);
+	} 
+	i++;
+});
 
 
 +(function () {
