@@ -273,6 +273,9 @@ iframe {
     @media screen and (max-width: $mq-m) {
       display: flex;
       flex-direction: column;
+      .fas, .fa-solid {
+        margin-right: 0;
+      }
     }
     @include for-size(mobile) {
       &:first-of-type {
