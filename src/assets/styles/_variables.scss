@@ -12,17 +12,3 @@ $mq-s: 767.89px;
 $mq-m: 991px;
 $mq-lg: 1200px;
 $mq-xl: 1800px;
-
-@mixin for-size($size) {
-  @if $size == mobile {
-    @media (max-width: $mq-xs) { @content; }
-  } @else if $size == small-devices {
-    @media (max-width: $mq-s) { @content; }
-  } @else if $size == tablet {
-    @media (min-width: ($mq-s + .5px)) { @content; }
-  } @else if $size == desktop {
-    @media (min-width: $mq-lg) { @content; }
-  } @else if $size == big-devices {
-    @media (min-width: $mq-xl) { @content; }
-  }
-}

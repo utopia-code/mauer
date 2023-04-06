@@ -12,8 +12,8 @@
 	</head>
 	<body>
 
-		<header>
-			<h1>
+		<header class="header">
+			<h1 class="title">
 				<div class="logo">
 					<div class="logo-left"></div>
 					<div class="logo-center"></div>
@@ -31,134 +31,125 @@
 			   
 		</header>
 				
-		<section class="wrapper">
-			<div class="content-wrap">
-				<div class="container-wrap">
+		<section>
 
-					<div class="intro">
-						<h2>Separación</h2>
-						<p>El Muro de Berlín fue un testimonio significativo de la división de Alemania y de toda Europa durante la Guerra Fría. 
-							Sólo ha sobrevivido un número limitado de piezas individuales de este muro.</p>
-					</div>
-
+			<div class="container-wrap">
+				<div class="content">
+					<h2 class="title">Separación</h2>
+					<p class="text">El Muro de Berlín fue un testimonio significativo de la división de Alemania y de toda Europa durante la Guerra Fría. 
+						Sólo ha sobrevivido un número limitado de piezas individuales de este muro.</p>
 				</div>
-
-				<div class="grid-videos">
-					<div class="grid-video-wrap">
-						<div class="grid-video-date">
-							<div class="video-date">1961</div>
-						</div>
-						<include src="./views/video-youtube.html">
-							{"id": "6Uxad8CoiQw", "start": "168", "figcaption": "Construcción del Muro de Berlín - 13 agosto de 1961", "position": "figcaption-left"}
-						</include>
-					</div>
-
-					<div class="separator">
-						<div class="separator-text-custom"></div>
-						<div class="separator-text-custom"></div>
-						<div class="separator-text-custom"></div>
-					</div>
-
-					<div class="grid-video-wrap">
-						<div class="grid-video-date">
-							<div class="video-date">1989</div>
-						</div>
-						<include src="./views/video-youtube.html">
-							{"id": "HNkIhouCiJg", "start": "5", "figcaption": "Caída del muro de Berlín - 9 de noviembre de 1989", "position": "figcaption-right"}
-						</include>
-					</div>
-				</div>
-				
 			</div>
+
+			<div class="grid-videos">
+				<div class="grid-video-wrap">
+					<div class="video-date">
+						<div class="date">1961</div>
+					</div>
+					<include src="./views/video-youtube.html">
+						{"id": "6Uxad8CoiQw", "start": "168", "figcaption": "Construcción del Muro de Berlín - 13 agosto de 1961", "position": "figcaption-left"}
+					</include>
+				</div>
+
+				<div class="separator">
+					<div class="separator-text-custom"></div>
+					<div class="separator-text-custom"></div>
+					<div class="separator-text-custom"></div>
+				</div>
+
+				<div class="grid-video-wrap">
+					<div class="video-date">
+						<div class="date">1989</div>
+					</div>
+					<include src="./views/video-youtube.html">
+						{"id": "HNkIhouCiJg", "start": "5", "figcaption": "Caída del muro de Berlín - 9 de noviembre de 1989", "position": "figcaption-right"}
+					</include>
+				</div>
+			</div>
+				
 		</section>
 
-		<section class="wrapper">
-			<div class="content-wrap">
+		<section>
 
-				<div class="container-wrap">
-					<div class="intro">
-						<h2>Unidades</h2>
-						<p>"Un monumento es algo más que una estructura de piedra, madera u hormigón. Estas piedras históricas 
-							del muro son un testimonio de nuestra historia, nuestra cultura y lugares vivos del recuerdo. 
-							Nuestra tarea es conservarlos, mantenerlos y llamar más la atención sobre ellos."</p>
-							<p>Cuando el muro estaba unido, separaba a la sociedad. Ahora que esta dividido, genera unidad.</p>
-							<p>Las <i lang="de">Mauersteine</i> o literalmente piedras del Muro, están repartidas por todo el mundo
-							como símbolo de la unidad de los pueblos. Aquí en Coblenza también hay tres ubicadas en el <i lang="de">Deutsches Eck</i></p>
-					</div>
+			<div class="container-wrap">
+				<div class="content">
+					<h2 class="title">Unidades</h2>
+					<p class="text">"Un monumento es algo más que una estructura de piedra, madera u hormigón. Estas piedras históricas 
+						del muro son un testimonio de nuestra historia, nuestra cultura y lugares vivos del recuerdo. 
+						Nuestra tarea es conservarlos, mantenerlos y llamar más la atención sobre ellos."</p>
+					<p class="text">Cuando el muro estaba unido, separaba a la sociedad. Ahora que esta dividido, genera unidad.</p>
+					<p class="text">Las <i lang="de">Mauersteine</i> o literalmente piedras del Muro, están repartidas por todo el mundo
+					como símbolo de la unidad de los pueblos. Aquí en Coblenza también hay tres ubicadas en el <i lang="de">Deutsches Eck</i></p>
 				</div>
+			</div>
 
-				<div class="grid-filter-wrap">
-					<div id="filters" class="button-group filter-button-group">
-						<include src="./views/grid-tabs.html"></include>
-					</div>
-				</div>
+			<div class="grid-tabs">
+				<include src="./views/grid-tabs.html"></include>
+			</div>
 
-				<div class="container-wrap">
+			<div class="container-wrap">
 
-					<div class="grid grid-container">
+				<div class="grid-mansonry">
 
-						<div class="grid-sizer"></div>
+					<div class="grid-sizer"></div>
 
-						<!-- isotope filter content -->
-						<include src="./views/grid-icon.html"></include>
-						<include src="./views/grid-text.html"></include>
-						<include src="./views/grid-lightbox.html"></include>
-				
-					</div>
-
+					<!-- isotope filter content -->
+					<include src="./views/grid-icon.html"></include>
+					<include src="./views/grid-text.html"></include>
+					<include src="./views/grid-lightbox.html"></include>
+			
 				</div>
 
 			</div>
+
 		</section>
 
-		<section class="wrapper">
-			<div class="content-wrap">
-				<div class="accordion">
+		<section>
+			<div class="accordion">
 
-					<ul class="accordion-list">
-						<li class="accordion-button js-accordion-button">Bibliografía <span><i class="fa-solid fa-plus"></i></span></li>
-						<li class="accordion-button js-accordion-button">Imágenes<span><i class="fa-solid fa-plus"></i></span></li>
-						<li class="accordion-button js-accordion-button">Vídeos<span><i class="fa-solid fa-plus"></i></span></li>
-					</ul>
+				<ul class="accordion-list">
+					<li class="button button-menu accordion-button js-accordion-button">Bibliografía <span><i class="fa-solid fa-plus"></i></span></li>
+					<li class="button button-menu accordion-button js-accordion-button">Imágenes<span><i class="fa-solid fa-plus"></i></span></li>
+					<li class="button button-menu accordion-button js-accordion-button">Vídeos<span><i class="fa-solid fa-plus"></i></span></li>
+				</ul>
 
-					<div class="container-wrap container">
+				<div class="container-wrap container">
 
-						<div class="accordion-button  accordion-button-mobile js-accordion-button-mobile">Bibliografía <span><i class="fa-solid fa-plus"></i></span></div>
-						<div class="accordion-panel">
-							<h2>Bibliografía</h2>
-							<p>Sitio web: <a href="https://the-wall-net.org/">the-wall-net.org</a></p>
-							<p>Sitio web: <a href="https://www.uokg.de/2018/10/koblenz_mauersteine/">www.uokf.de</a></p>
-							<p>Sitio web: <a href="https://de.wikipedia.org/wiki/Deutsches_Eck">wikipedia.org</a></p>
-							<p>Sitio web: <a href="https://www.bpb.de/themen/deutsche-einheit/deutsche-teilung-deutsche-einheit/43731/der-9-november-1989/">Der 9. November 1989</a></p>
-							<p>Sitio web: <a href="https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11/?month=11&year=1989&opennid=182521&moc=1">Chronik der Mauer</a></p>
-						</div>
-	
-						<div class="accordion-button accordion-button-mobile js-accordion-button-mobile">Imágenes<span><i class="fa-solid fa-plus"></i></span></div>
-						<div class="accordion-panel">
-							<h2>Imágenes</h2>
-							<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=14996554">Holger Weinandt - Eigenes Werk, CC BY-SA 3.0 de</a></p>
-							<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=30683382">Wolkenkratzer - Eigenes Werk, CC BY-SA 3.0</a></p>
-							<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=11059678">Kowelenzer - Eigenes Werk, Gemeinfrei</a></p>
-							<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=5450810">Bundesarchiv, B 145 Bild-F011327-0025 / Ilgner, Gerhard Dr. / CC-BY-SA 3.0, CC BY-SA 3.0 de</a></p>
-							<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=5482574">Bundesarchiv, Bild 146-1970-088-52 / CC-BY-SA 3.0, CC BY-SA 3.0 de</a></p>
-							<p>Sección <i>Inscripciones</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=53516049">Immanuel Giel, CC BY 3.0</a></p>
-							<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=16133615">Peter Stehlik PS-2507 - Eigenes Werk, CC BY 3.0</a></p>
-							<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=16133615">Rolf Kranz - Eigenes Werk, CC BY-SA 4.0</a></p>
-							<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=374575">CC BY-SA 3.0</a></p>
-							<p>Sección <i>Inscripciones</i>: <a href="https://www.bpb.de/themen/deutsche-einheit/deutsche-teilung-deutsche-einheit/43731/der-9-november-1989/">Un día después de la apertura de la frontera, el 9 de noviembre de 1989, la gente escala el Muro de Berlín frente a la Puerta de Brandemburgo. (© AP)</a></p>
-							<p>Sección <i>Portada</i>: <a href="https://www.bpb.de/themen/deutsche-einheit/deutsche-teilung-deutsche-einheit/43731/der-9-november-1989/">El Muro un año antes de su "caída". Inaccesible en el lado este, una pasarela en el lado oeste (aquí próximo a Potsdamer Platz). (© Holger Kulick) </a></p>
-							<p>Sección <i>Inscripciones</i>: <a href="https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11/?month=11&year=1989&opennid=182521&moc=1">Tras la abolición de la "orden de disparar": guardia de fronteras en Berlín (Foto: Hilde Kroll)</a></p>
-							<p>Sección <i>Inscripciones</i>: <a href="https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11/?month=11&year=1989&opennid=182521&moc=1">En la Puerta de Brandemburgo, 10. de noviembre de 1989 (Foto: Klaus Lehnartz/German Federal Press Office)</a></p>
-						</div>
-	
-						<div class="accordion-button accordion-button-mobile js-accordion-button-mobile">Vídeos<span><i class="fa-solid fa-plus"></i></span></div>
-						<div class="accordion-panel">
-							<h2>Vídeos</h2>
-							<p>YouTube: <a href="https://www.youtube.com/watch?v=6Uxad8CoiQw">Construcción del Muro de Berlín (13 agosto de 1961)</a></p>
-							<p>YouTube: <a href="https://www.youtube.com/watch?v=HNkIhouCiJg">Caída del muro de Berlín (9 de noviembre de 1989)</a></p>
-						</div>
-
+					<div class="button accordion-button accordion-button-mobile js-accordion-button-mobile">Bibliografía <span><i class="fa-solid fa-plus"></i></span></div>
+					<div class="accordion-panel">
+						<h2>Bibliografía</h2>
+						<p>Sitio web: <a href="https://the-wall-net.org/">the-wall-net.org</a></p>
+						<p>Sitio web: <a href="https://www.uokg.de/2018/10/koblenz_mauersteine/">www.uokf.de</a></p>
+						<p>Sitio web: <a href="https://de.wikipedia.org/wiki/Deutsches_Eck">wikipedia.org</a></p>
+						<p>Sitio web: <a href="https://www.bpb.de/themen/deutsche-einheit/deutsche-teilung-deutsche-einheit/43731/der-9-november-1989/">Der 9. November 1989</a></p>
+						<p>Sitio web: <a href="https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11/?month=11&year=1989&opennid=182521&moc=1">Chronik der Mauer</a></p>
 					</div>
+
+					<div class="button accordion-button accordion-button-mobile js-accordion-button-mobile">Imágenes<span><i class="fa-solid fa-plus"></i></span></div>
+					<div class="accordion-panel">
+						<h2>Imágenes</h2>
+						<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=14996554">Holger Weinandt - Eigenes Werk, CC BY-SA 3.0 de</a></p>
+						<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=30683382">Wolkenkratzer - Eigenes Werk, CC BY-SA 3.0</a></p>
+						<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=11059678">Kowelenzer - Eigenes Werk, Gemeinfrei</a></p>
+						<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=5450810">Bundesarchiv, B 145 Bild-F011327-0025 / Ilgner, Gerhard Dr. / CC-BY-SA 3.0, CC BY-SA 3.0 de</a></p>
+						<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=5482574">Bundesarchiv, Bild 146-1970-088-52 / CC-BY-SA 3.0, CC BY-SA 3.0 de</a></p>
+						<p>Sección <i>Inscripciones</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=53516049">Immanuel Giel, CC BY 3.0</a></p>
+						<p>Sección <i>Deutsches Eck</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=16133615">Peter Stehlik PS-2507 - Eigenes Werk, CC BY 3.0</a></p>
+						<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=16133615">Rolf Kranz - Eigenes Werk, CC BY-SA 4.0</a></p>
+						<p>Sección <i>Estatua</i>: <a href="https://commons.wikimedia.org/w/index.php?curid=374575">CC BY-SA 3.0</a></p>
+						<p>Sección <i>Inscripciones</i>: <a href="https://www.bpb.de/themen/deutsche-einheit/deutsche-teilung-deutsche-einheit/43731/der-9-november-1989/">Un día después de la apertura de la frontera, el 9 de noviembre de 1989, la gente escala el Muro de Berlín frente a la Puerta de Brandemburgo. (© AP)</a></p>
+						<p>Sección <i>Portada</i>: <a href="https://www.bpb.de/themen/deutsche-einheit/deutsche-teilung-deutsche-einheit/43731/der-9-november-1989/">El Muro un año antes de su "caída". Inaccesible en el lado este, una pasarela en el lado oeste (aquí próximo a Potsdamer Platz). (© Holger Kulick) </a></p>
+						<p>Sección <i>Inscripciones</i>: <a href="https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11/?month=11&year=1989&opennid=182521&moc=1">Tras la abolición de la "orden de disparar": guardia de fronteras en Berlín (Foto: Hilde Kroll)</a></p>
+						<p>Sección <i>Inscripciones</i>: <a href="https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11/?month=11&year=1989&opennid=182521&moc=1">En la Puerta de Brandemburgo, 10. de noviembre de 1989 (Foto: Klaus Lehnartz/German Federal Press Office)</a></p>
+					</div>
+
+					<div class="button accordion-button accordion-button-mobile js-accordion-button-mobile">Vídeos<span><i class="fa-solid fa-plus"></i></span></div>
+					<div class="accordion-panel">
+						<h2>Vídeos</h2>
+						<p>YouTube: <a href="https://www.youtube.com/watch?v=6Uxad8CoiQw">Construcción del Muro de Berlín (13 agosto de 1961)</a></p>
+						<p>YouTube: <a href="https://www.youtube.com/watch?v=HNkIhouCiJg">Caída del muro de Berlín (9 de noviembre de 1989)</a></p>
+					</div>
+
 				</div>
 			</div>
 		</section>

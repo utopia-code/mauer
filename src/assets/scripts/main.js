@@ -8,15 +8,16 @@ import Isotope from 'isotope-layout';
 import fslightbox from 'fslightbox';
 import SuperMarquee from 'sp-supermarquee';
 
+
 /**
  * Write any other JavaScript below
  */
 
 
-// init isotope gallery;
+/* ---- init isotope gallery ---- */
 
 +( function() {
-	var iso = new Isotope( '.grid', {
+	var iso = new Isotope( '.grid-mansonry', {
 		itemSelector: '.grid-item',
 		percentPosition: true,
 		masonry: {
@@ -33,61 +34,54 @@ import SuperMarquee from 'sp-supermarquee';
 		iso.arrange({ sortBy: 'random' });
 	});
 
-	let filtersElem = document.querySelectorAll('.filter-button-group .button');
+	let filtersElem = document.querySelectorAll('.tab-filter');
 
-	filtersElem.forEach(function(filterElem) {
-		filterElem.addEventListener( 'click', function() {
+	filtersElem.forEach(function(filter) {
+		filter.addEventListener( 'click', function() {
 			let filterValue = this.getAttribute('data-filter');
 			iso.arrange({ filter: filterValue });
-		});
-	});
-} )();
 
-
-// set class in active buttons isotope gallery
-
-+( function() {
-	let buttonGroup = document.querySelectorAll('.button-group .button');
-
-	buttonGroup.forEach(function(button) {
-		button.addEventListener('click', function(e) {
 			document.querySelector('.is-checked').classList.remove('is-checked');
-			button.classList.add('is-checked');
+			filter.classList.add('is-checked');
 		});
 	});
 } )();
 
 
-// set animation marquee
++(function () {
 
-const speedMapping = [ "superfast",  "slow",  "medium",  "fast", "medium", "slow", "fast" ];
-let separators = document.querySelectorAll('.separator-text-custom');
-let i = 0;
+ 	/* ---- set animation marquee ---- */
 
-separators.forEach( ( scrollContainer ) => {
-	new SuperMarquee( scrollContainer,
-		{
-			"content": "Muro de Berlín Muro de Berlín Muro de Berlín",
-			"speed" : speedMapping[ i % 6 ]
-		}
-	);
+	const speedMapping = [ "superfast",  "slow",  "medium",  "fast", "medium", "slow", "fast" ];
+	let separators = document.querySelectorAll('.separator-text-custom');
+	let i = 0;
 
-	if (separators[1]) {
-		new SuperMarquee( separators[1],
+	separators.forEach( ( scrollContainer ) => {
+		new SuperMarquee( scrollContainer,
 			{
 				"content": "Muro de Berlín Muro de Berlín Muro de Berlín",
-				"speed" : speedMapping[ i % 6 ],
-				"direction" : "rtl"
+				"speed" : speedMapping[ i % 6 ]
 			}
 		);
-	} 
-	i++;
-});
+
+		if (separators[1]) {
+			new SuperMarquee( separators[1],
+				{
+					"content": "Muro de Berlín Muro de Berlín Muro de Berlín",
+					"speed" : speedMapping[ i % 6 ],
+					"direction" : "rtl"
+				}
+			);
+		} 
+		i++;
+	});
+
+})();
 
 
 +(function () {
     
-    // aspect-ratio
+    /* ---- set aspect-ratio images ---- */
 
     let aspectRatio = document.querySelectorAll('.js-set-aspect-ratio');
 
@@ -98,7 +92,6 @@ separators.forEach( ( scrollContainer ) => {
 			r.style.aspectRatio = `${width} / ${height}`;
 			r.style.width = '100%';
 			r.style.height = '100%';
-			// console.log(`${width} / ${height}`);
 		})
 	});
 
@@ -107,7 +100,7 @@ separators.forEach( ( scrollContainer ) => {
 
 +(function () {
     
-    // accordion
+     /* ---- accordion ---- */
 
     let containers = document.querySelectorAll('.accordion-panel');
 	let buttons = document.querySelectorAll('.js-accordion-button');
@@ -115,14 +108,14 @@ separators.forEach( ( scrollContainer ) => {
 
 	function show_content(elem) {
 		clear_panel();
-		elem.classList.add('active');
+		elem.classList.add('is-open');
 	}
 
 	buttons.forEach(function(button, index){
 		button.addEventListener('click', function() {
-			if (hasClass(button, 'active') != true) {
+			if (hasClass(button, 'is-open') != true) {
 				show_content(containers[index])
-				this.classList.add('active');
+				this.classList.add('is-open');
 			} else {
 				clear_panel();
 			}
@@ -131,9 +124,9 @@ separators.forEach( ( scrollContainer ) => {
 
 	buttons_mobile.forEach(function(button_mobile, index){
 		button_mobile.addEventListener('click', function() {
-			if (hasClass(button_mobile, 'active') != true) {
+			if (hasClass(button_mobile, 'is-open') != true) {
 				show_content(containers[index])
-				this.classList.add('active');
+				this.classList.add('is-open');
 			} else {
 				clear_panel();
 			}
@@ -142,13 +135,13 @@ separators.forEach( ( scrollContainer ) => {
 
 	function clear_panel() {
 		containers.forEach(function(container){
-			container.classList.remove('active');
+			container.classList.remove('is-open');
 		});
 		buttons.forEach(function(button){
-			button.classList.remove('active');
+			button.classList.remove('is-open');
 		});
 		buttons_mobile.forEach(function(button_mobile){
-			button_mobile.classList.remove('active');
+			button_mobile.classList.remove('is-open');
 		});
 	}
 

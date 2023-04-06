@@ -1,0 +1,345 @@
+/*------------------------------------*\
+   #HEADER COVER IMAGE
+\*------------------------------------*/
+
+.container-cover-image {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @include for-size(mobile) {
+    height: 240px;
+  }
+
+  @include for-size(small-devices) {
+    height: 300px;
+  }
+
+  @include for-size(tablet) {
+    height: 450px;
+  }
+
+  @include for-size(desktop) {
+    height: 700px;
+  }
+
+  @include for-size(big-devices) {
+    height: 940px;
+  }
+
+  .cover-image {
+    object-fit: cover;
+    min-height: 100%;
+  }
+}
+
+
+
+/*------------------------------------*\
+   #CONTENT SITE
+\*------------------------------------*/
+
+.content {
+  text-align: center;
+  margin: 8rem 0 10rem;
+
+  .title {
+    font-size: calc(min(max(2rem, 20rem), 10vw));
+    line-height: 1;
+    margin: 0;
+  }
+
+  .text {
+    font-size: calc(min(max(2rem, 5rem), 5vw));
+    line-height: 1.2;
+  }
+
+  @include for-size(small-devices) {
+    margin: 4rem 0 6rem;
+  }
+}
+
+
+
+/*------------------------------------*\
+   #BUTTON
+\*------------------------------------*/
+
+.button {
+  padding: 3rem 1.5rem;
+  color: $color-main;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 2px solid $color-main;
+
+  .fas, .fa-solid {
+    font-size: 1.8em;
+  }
+}
+
+.button-menu {
+  flex: 1;
+  border-right: 0;
+  &:first-of-type {
+    border-left: 0;
+  }
+}
+
+
+
+/*------------------------------------*\
+   #SEPARATOR VIDEOS
+\*------------------------------------*/
+
+.separator {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include for-size(tablet) {
+    width: 10vw;
+    margin: 0 .2vw;
+    border: 2px solid $color-main;
+  }
+}
+
+.separator-text-custom {
+  font-size: clamp(calc(min(9vw, 13rem)), 24rem, calc(max(10vw, 13rem)));
+  line-height: 1;
+  font-family: $font-family-serif;
+  @include for-size(small-devices) {
+    &:last-child, &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+
+
+/*------------------------------------*\
+   #MODULE YOUTUBE VIDEOS
+\*------------------------------------*/
+
+.grid-videos {
+  @include for-size(tablet)  {
+    display: flex;
+    .grid-video-wrap {
+      flex: 1;
+    }
+  }
+}
+
+.video-date {
+  position: relative;
+  padding-bottom: 12vw;
+  background-color: $color-main;
+
+  .date {
+    font-family: $font-family-serif;
+    font-size: 19vw;
+    position: absolute;
+    line-height: .8;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    @include for-size(small-devices) {
+      font-size: 30vw;
+    }
+    @include for-size(tablet) {
+      -webkit-text-stroke: 2px;
+    }
+    @include for-size(desktop) {
+      -webkit-text-stroke: 3px;
+    }
+  }
+}
+
+.video-figcaption {
+  font-size: 2rem;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid $color-main;
+  margin-top: -7px;
+  @include for-size(tablet) {
+    &.figcaption-left {
+      border-left: 0;
+    }
+    &.figcaption-right {
+      border-right: 0;
+    }
+  }
+  @include for-size(small-devices) {
+    border-left: 0;
+    border-right: 0;
+  }
+  @include for-size(mobile) {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+/*------------------------------------*\
+   #FILTER TABS MENU
+\*------------------------------------*/
+
+.grid-tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.tab-filter {
+  &:first-of-type {
+    white-space: nowrap;
+  }
+
+  .fas, .fa-solid {
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: $mq-lg) {
+    &:first-of-type, &:last-child {
+      flex: 1.5;
+    }
+  }
+
+  @media screen and (max-width: $mq-m) {
+    display: flex;
+    flex-direction: column;
+    .fas, .fa-solid {
+      margin-right: 0;
+    }
+  }
+
+  @include for-size(small-devices) {
+    padding: 2rem .10rem;
+    font-size: 1.6rem;
+  }
+
+  @include for-size(mobile) {
+    padding: 2rem .5rem;
+    font-size: 1.4rem;
+    &:first-of-type {
+      white-space: pre-wrap;
+    }
+  }
+}
+
+
+
+/*------------------------------------*\
+   #FILTER GRID MANSONRY
+\*------------------------------------*/
+
+.grid-item {
+  margin-bottom: 1rem;
+
+  &[data-category=text] {
+    padding: 2rem;
+    background-color: $color-main;
+    color: #fff;
+  }
+
+  &[data-category=icon] {
+    padding: 2rem;
+    text-align: center;
+    color: $color-secondary;
+  }
+
+  &[data-category=image] {
+    img {
+      display: block;
+    }
+  }
+
+  .fas, .fa-solid {
+    font-size: 10em;
+  }
+}
+
+.grid-sizer,
+.grid-item { 
+  width: calc(25% - 1rem); 
+
+  @include for-size(big-devices) {
+    width: calc(20% - 1rem); 
+  }
+
+  @include for-size(small-devices) {
+    width: calc(50% - 1rem);
+  }
+
+  @include for-size(mobile) {
+    width: 100%; 
+  }  
+}
+
+.grid-item-width-2 { 
+  width: calc(50% - 1rem); 
+
+  @include for-size(big-devices) {
+    width: calc(40% - 1rem); 
+  }
+
+  @include for-size(small-devices) {
+    width: 100%; 
+  }
+}
+
+
+
+/*------------------------------------*\
+   #ACCORDION
+\*------------------------------------*/
+
+.accordion-button {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  .fas, .fa-solid {
+    font-size: 1.2em;
+    margin-right: 1rem;
+    transition: transform .2s ease;
+  }
+}
+
+.accordion-button-mobile {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.accordion-panel {
+  height: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  flex-basis: 100%;
+  >* {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+  }
+
+  @include for-size(small-devices) {
+    border: 2px solid $color-main;
+    border-top: 0;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 0;
+    h2 {
+      display: none;
+    }
+  }
+
+  @include for-size(tablet) {
+    border-left: 2px solid $color-main;
+    border-right: 2px solid $color-main;
+  }
+}

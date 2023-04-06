@@ -1,0 +1,103 @@
+/*------------------------------------*\
+   #BUTTON HOVER AND IS-CHECKED
+\*------------------------------------*/
+
+.button {
+  &:hover {
+    @include for-size(tablet) {
+      background-color: $color-secondary;
+    }
+  }
+
+  &:active,
+  &.is-checked {
+    background-color: $color-main;
+    color: #fff;
+  }
+}
+
+
+
+/*------------------------------------*\
+   #HOVER IMAGE LIGHTBOX
+\*------------------------------------*/
+
+
+.grid-item[data-category=image] >a:hover + .is-hover-grid-item .fa-solid {
+  opacity: 1;
+}
+
+.is-hover-grid-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-secondary;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+
+  .fas, .fa-solid {
+    opacity: 0;
+    font-size: 5rem;
+    transition: opacity .2s ease;
+  }
+}
+
+
+
+/*------------------------------------*\
+   #BUTTON ACCORDION IS-ACTIVE
+\*------------------------------------*/
+
+
+.accordion-button {
+  &.is-open {
+    .fas, .fa-solid {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.accordion-panel {
+  &.is-open {
+    position: relative;
+    height: min-content;
+    >* {
+      height: auto;
+      opacity: 1;
+      transition: opacity .3s ease;
+    }
+
+    @include for-size(small-devices) {
+      padding: 0 20px 50px;
+    }
+
+    @include for-size(tablet) {
+      padding: 20px;
+      padding-bottom: 6rem;
+      margin-bottom: -6rem;
+    }
+  } 
+}
+
+@include for-size(small-devices) {
+  .accordion-button-mobile {
+    display: flex;
+  }
+
+  .accordion-list {
+    display: none;
+  }
+}
+
+@include for-size(tablet) {
+  .accordion-button-mobile {
+    display: none;
+  }
+
+  .accordion-list {
+    display: flex;
+  }
+}
