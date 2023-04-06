@@ -12,6 +12,8 @@
     }
 </script>
 
+ <!--  array button: [0: tab, 1: icon, 2: text] -->
+
 <each loop="item, key in button">
     <button class="button {{ key === 0 ? 'is-checked' : '' }}" data-filter="{{ item[0] }}"><i class="fa-solid {{ item[1] }}"></i>{{ item[2] }}</button> 
 </each>

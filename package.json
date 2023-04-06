@@ -49,6 +49,7 @@
     "process": "^0.11.10",
     "rimraf": "^3.0.2",
     "sharp": "0.31.1",
+    "sp-supermarquee": "^2.0.0",
     "stylelint": "^15.3.0",
     "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-recommended-scss": "^9.0.1",
