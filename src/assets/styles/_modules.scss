@@ -40,13 +40,13 @@
 \*------------------------------------*/
 
 .content {
-  text-align: center;
   margin: 8rem 0 10rem;
+  text-align: center;
 
   .title {
+    margin: 0;
     font-size: $font-title;
     line-height: 1;
-    margin: 0;
   }
 
   .text {
@@ -67,10 +67,10 @@
 
 .button {
   padding: 3rem 1.5rem;
-  color: $color-main;
-  background-color: #fff;
-  cursor: pointer;
   font-size: 2rem;
+  color: $color-main;
+  cursor: pointer;
+  background-color: #fff;
   border: 2px solid $color-main;
 
   .fas, .fa-solid {
@@ -93,10 +93,10 @@
 \*------------------------------------*/
 
 .separator {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow: hidden;
   @include for-size(tablet) {
     width: 10vw;
     margin: 0 .2vw;
@@ -105,9 +105,9 @@
 }
 
 .separator-text-custom {
+  font-family: $font-family-serif;
   font-size: $font-separator;
   line-height: 1;
-  font-family: $font-family-serif;
   @include for-size(small-devices) {
     &:last-child, &:nth-child(2) {
       display: none;
@@ -136,12 +136,12 @@
   background-color: $color-main;
 
   .date {
+    position: absolute;
+    left: 50%;
     font-family: $font-family-serif;
     font-size: 19vw;
-    position: absolute;
     line-height: .8;
     color: #fff;
-    left: 50%;
     transform: translateX(-50%);
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
@@ -158,11 +158,11 @@
 }
 
 .video-figcaption {
-  font-size: 2rem;
   padding: 20px;
+  margin-top: -7px;
+  font-size: 2rem;
   text-align: center;
   border: 2px solid $color-main;
-  margin-top: -7px;
   @include for-size(tablet) {
     &.figcaption-left {
       border-left: 0;
@@ -172,8 +172,8 @@
     }
   }
   @include for-size(small-devices) {
-    border-left: 0;
     border-right: 0;
+    border-left: 0;
   }
   @include for-size(mobile) {
     font-size: 1.6rem;
@@ -240,14 +240,14 @@
 
   &[data-category=text] {
     padding: 2rem;
-    background-color: $color-main;
     color: #fff;
+    background-color: $color-main;
   }
 
   &[data-category=icon] {
     padding: 2rem;
-    text-align: center;
     color: $color-secondary;
+    text-align: center;
   }
 
   &[data-category=image] {
@@ -297,30 +297,29 @@
 \*------------------------------------*/
 
 .accordion-button {
-  display: inline-block;
   display: flex;
   justify-content: space-between;
   .fas, .fa-solid {
-    font-size: 1.2em;
     margin-right: 1rem;
+    font-size: 1.2em;
     transition: transform .2s ease;
   }
 }
 
 .accordion-button-mobile {
-  margin-bottom: 0;
-  border-bottom: 0;
-  padding: 2rem 1rem;
   position: relative;
   z-index: 1;
+  padding: 2rem 1rem;
+  margin-bottom: 0;
+  border-bottom: 0;
 }
 
 .accordion-panel {
+  flex-basis: 100%;
   height: 0;
   padding: 0;
-  border: 0;
   margin: 0;
-  flex-basis: 100%;
+  border: 0;
   >* {
     height: 0;
     margin: 0;
@@ -328,18 +327,18 @@
   }
 
   @include for-size(small-devices) {
-    border: 2px solid $color-main;
-    border-top: 0;
-    margin-bottom: 10px;
     position: relative;
     z-index: 0;
+    margin-bottom: 10px;
+    border: 2px solid $color-main;
+    border-top: 0;
     h2 {
       display: none;
     }
   }
 
   @include for-size(tablet) {
-    border-left: 2px solid $color-main;
     border-right: 2px solid $color-main;
+    border-left: 2px solid $color-main;
   }
 }

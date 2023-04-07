@@ -11,8 +11,8 @@
 
   &:active,
   &.is-checked {
-    background-color: $color-main;
     color: #fff;
+    background-color: $color-main;
   }
 }
 
@@ -23,26 +23,28 @@
 \*------------------------------------*/
 
 
-.grid-item[data-category=image] >a:hover + .is-hover-grid-item .fa-solid {
-  opacity: 1;
-}
-
 .is-hover-grid-item {
   position: absolute;
   top: 0;
   left: 0;
-  color: $color-secondary;
-  font-size: 1.8rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: $color-secondary;
   pointer-events: none;
+}
 
+.is-hover-icon {
+  opacity: 0;
+  transition: opacity .2s ease;
   .fas, .fa-solid {
-    opacity: 0;
     font-size: 5rem;
-    transition: opacity .2s ease;
   }
+}
+
+.grid-item[data-category=image] >a:hover + .is-hover-grid-item .is-hover-icon {
+  opacity: 1;
 }
 
 

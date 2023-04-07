@@ -7,10 +7,9 @@
     "declaration-block-no-duplicate-properties": true,
     "selector-anb-no-unmatchable": true,
     "annotation-no-unknown": true,
-    "declaration-property-value-no-unknown": true,
     "no-unknown-animations": true,
     "declaration-property-unit-allowed-list": {
-        "font-size": ["em", "rem", "px"],
+        "font-size": ["em", "rem", "px", "vw"],
         "/^animation/": "s",
         "line-height": []
     },
