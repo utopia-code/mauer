@@ -44,13 +44,13 @@
   margin: 8rem 0 10rem;
 
   .title {
-    font-size: calc(min(max(2rem, 20rem), 10vw));
+    font-size: $font-title;
     line-height: 1;
     margin: 0;
   }
 
   .text {
-    font-size: calc(min(max(2rem, 5rem), 5vw));
+    font-size: $font-text;
     line-height: 1.2;
   }
 
@@ -105,7 +105,7 @@
 }
 
 .separator-text-custom {
-  font-size: clamp(calc(min(9vw, 13rem)), 24rem, calc(max(10vw, 13rem)));
+  font-size: $font-separator;
   line-height: 1;
   font-family: $font-family-serif;
   @include for-size(small-devices) {

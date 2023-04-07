@@ -1,11 +1,17 @@
 @use "sass:color";
+@use "sass:math";
 
 $font-family-sans-serif: "Futura", sans-serif;
 $font-family-serif: "Podkova", serif;
 
 $color-main: #000000;
 $color-secondary: #ff0000;
-// $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$color-links: color.scale($color-secondary, $lightness: 70%);
+
+$font-main: calc(min(math.max(2rem, 25rem), 13vw));
+$font-title: calc(min(math.max(2rem, 20rem), 10vw));
+$font-text: calc(min(math.max(2rem, 5rem), 5vw));
+$font-separator: calc(clamp(9vw, 13vw, 35rem));
 
 $mq-xs: 450px;
 $mq-s: 767.89px;
