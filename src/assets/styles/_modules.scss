@@ -1,4 +1,30 @@
 /*------------------------------------*\
+   #LOGO
+\*------------------------------------*/
+
+.logo {
+  display: flex;
+  margin-right: 10px;
+  > div {
+    width: 1.5vw;
+    height: 100%;
+    margin-left: 1.5vw;
+    background-color: $color-main;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  
+  .logo-left, .logo-center  {
+    transform: rotate(15deg);
+  }
+  .logo-center {
+    height: 50%;
+  }
+}
+
+
+/*------------------------------------*\
    #HEADER COVER IMAGE
 \*------------------------------------*/
 
@@ -70,8 +96,8 @@
   font-size: 2rem;
   color: $color-main;
   cursor: pointer;
-  background-color: #fff;
-  border: 2px solid $color-main;
+  background-color: $color-white;
+  border: $border;
 
   .fas, .fa-solid {
     font-size: 1.8em;
@@ -100,7 +126,7 @@
   @include for-size(tablet) {
     width: 10vw;
     margin: 0 .2vw;
-    border: 2px solid $color-main;
+    border: $border;
   }
 }
 
@@ -141,7 +167,7 @@
     font-family: $font-family-serif;
     font-size: 19vw;
     line-height: .8;
-    color: #fff;
+    color: $color-white;
     transform: translateX(-50%);
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
@@ -162,7 +188,7 @@
   margin-top: -7px;
   font-size: 2rem;
   text-align: center;
-  border: 2px solid $color-main;
+  border: $border;
   @include for-size(tablet) {
     &.figcaption-left {
       border-left: 0;
@@ -232,7 +258,7 @@
 
 
 /*------------------------------------*\
-   #FILTER GRID MANSONRY
+   #FILTER GRID MASONRY
 \*------------------------------------*/
 
 .grid-item {
@@ -240,7 +266,7 @@
 
   &[data-category=text] {
     padding: 2rem;
-    color: #fff;
+    color: $color-white;
     background-color: $color-main;
   }
 
@@ -330,7 +356,7 @@
     position: relative;
     z-index: 0;
     margin-bottom: 10px;
-    border: 2px solid $color-main;
+    border: $border;
     border-top: 0;
     h2 {
       display: none;
@@ -338,7 +364,7 @@
   }
 
   @include for-size(tablet) {
-    border-right: 2px solid $color-main;
-    border-left: 2px solid $color-main;
+    border-right: $border;
+    border-left: $border;
   }
 }

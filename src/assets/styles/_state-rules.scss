@@ -11,7 +11,7 @@
 
   &:active,
   &.is-checked {
-    color: #fff;
+    color: $color-white;
     background-color: $color-main;
   }
 }

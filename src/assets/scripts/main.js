@@ -17,7 +17,7 @@ import SuperMarquee from 'sp-supermarquee';
 /* ---- init isotope gallery ---- */
 
 +( function() {
-	var iso = new Isotope( '.grid-mansonry', {
+	var iso = new Isotope( '.grid-masonry', {
 		itemSelector: '.grid-item',
 		percentPosition: true,
 		masonry: {
@@ -60,7 +60,7 @@ import SuperMarquee from 'sp-supermarquee';
 		new SuperMarquee( scrollContainer,
 			{
 				"content": "Muro de Berlín Muro de Berlín Muro de Berlín",
-				"speed" : speedMapping[ i % 6 ]
+				"speed": speedMapping[ i % 6 ]
 			}
 		);
 
@@ -68,7 +68,7 @@ import SuperMarquee from 'sp-supermarquee';
 			new SuperMarquee( separators[1],
 				{
 					"content": "Muro de Berlín Muro de Berlín Muro de Berlín",
-					"speed" : speedMapping[ i % 6 ],
+					"speed": speedMapping[ i % 6 ],
 					"direction" : "rtl"
 				}
 			);

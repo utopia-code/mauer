@@ -52,16 +52,24 @@
 <each loop="img in images">
 
     <div class="grid-item {{ img[0] }} {{ img[1] }}" data-category="image">
-        <a data-fslightbox="image-{{ img[0] }}" href="./assets/images/gallery/{{ img[2] }}" data-alt="{{ img[4] }}" >
+        <a data-fslightbox="image-{{ img[0] }}" href="./assets/images/gallery/{{ img[2] }}" data-alt="{{ img[5] }}" >
             <picture>
                 <source type="image/avif" srcset="./assets/images/gallery/thumb-{{ img[2] }}?as=avif">
                 <source type="image/webp" srcset="./assets/images/gallery/thumb-{{ img[2] }}?as=webp">
                 <source type="image/jpg" srcset="./assets/images/gallery/thumb-{{ img[2] }}">
     
-                <img src="./assets/images/gallery/thumb-{{ img[2] }}" alt="{{ img[5] }}" class="js-set-aspect-ratio" width="{{ img[3] }}" height="{{ img[4] }}">
+                <img 
+                    src="./assets/images/gallery/thumb-{{ img[2] }}" 
+                    alt="{{ img[5] }}" 
+                    class="js-set-aspect-ratio" 
+                    width="{{ img[3] }}" 
+                    height="{{ img[4] }}"
+                >
             </picture>
         </a>
-        <div class="is-hover-grid-item js-set-aspect-ratio" width="{{ img[3] }}" height="{{ img[4] }}"><span class="is-hover-icon"><i class="fa-solid fa-eye"></i></span></div>
+        <div class="is-hover-grid-item js-set-aspect-ratio" width="{{ img[3] }}" height="{{ img[4] }}">
+            <span class="is-hover-icon"><i class="fa-solid fa-eye"></i></span>
+        </div>
     </div>
 
 </each>
